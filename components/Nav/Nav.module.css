@@ -1,0 +1,316 @@
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  height: 90px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.navMobileTopBar {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: red; */
+  align-items: center;
+}
+
+.logoContainerMobile {
+  width: 20%;
+}
+
+.anchorsMobileContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 0 1em;
+}
+
+.anchorsMobile {
+  color: black;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+  /* text-align: center; */
+}
+
+.closeButtonImg {
+  width: 8%;
+  background-color: transparent;
+  list-style: none;
+  border: none;
+}
+
+.socialIconsMobile {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.socialIconsMobile a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.anchors {
+  display: none;
+}
+
+.navMobile {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 999;
+  padding: 1em;
+}
+
+.logoContainer {
+  width: 20%;
+}
+
+.socialIcons {
+  width: 0;
+  display: none;
+}
+
+@media only screen and (min-width: 350px) {
+  .anchorsMobile {
+    font-size: 2em;
+    line-height: 2.2em;
+  }
+
+  .socialIconsMobile {
+    width: 35%;
+  }
+
+  .socialIconsMobile a {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .nav {
+    height: 140px;
+    padding: 0em 2em;
+  }
+
+  .socialIconsMobile {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 630px) {
+  .socialIconsMobile {
+    width: 20%;
+  }
+
+  .anchorsMobileContainer,
+  .navMobileTopBar {
+    padding: 0 1em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navBurger,
+  .navMobile {
+    display: none;
+  }
+
+  .nav {
+    height: 150px;
+    padding: 1em 2em;
+  }
+
+  .logoContainer {
+    width: 15%;
+  }
+
+  .nav a {
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    padding: 0.8em 1.5em;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.4s;
+  }
+  .nav a:hover {
+    background-color: rgba(39, 54, 80, 0.2);
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .active {
+    background-color: #273650;
+    color: white !important;
+  }
+
+  .active:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgba(39, 54, 80, 0.2) !important;
+  }
+
+  .socialIcons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 10px !important;
+    box-sizing: content-box;
+    background-color: #273650;
+  }
+
+  .anchors {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 889px) {
+  .nav a {
+    padding: 1em 1.7em;
+    font-size: 13px;
+  }
+
+  .nav {
+    height: 180px;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .socialIcons {
+    width: 12%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav {
+    height: 230px;
+    padding: 0em 4em;
+  }
+
+  .anchors {
+    width: 50%;
+    margin-left: 23%;
+    margin-right: 5%;
+  }
+
+  .socialIcons {
+    width: 12%;
+  }
+
+  .nav {
+    justify-content: flex-end;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logoContainer {
+    width: 16%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .nav a {
+    font-size: 14px;
+  }
+
+  .socialIcons {
+    width: 10%;
+  }
+
+  .nav {
+    padding: 0em 3em;
+    height: 200px;
+  }
+
+  .anchors {
+    width: 50%;
+  }
+
+  .logoContainer {
+    width: 14%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .nav {
+    padding: 0em 4em;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  .logoContainer {
+    width: 15%;
+  }
+
+  .socialIcons {
+    width: 8%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .logoContainer {
+    width: 15%;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  .nav {
+    padding: 0em 10em;
+    height: 220px;
+  }
+
+  .socialIcons {
+    width: 8%;
+    margin-right: 5%;
+  }
+
+  .anchors {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 3%;
+  }
+}

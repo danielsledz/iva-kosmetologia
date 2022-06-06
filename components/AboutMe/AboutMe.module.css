@@ -1,0 +1,139 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2em 1em 0em 1em;
+  color: white;
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #273650;
+}
+
+.fullWidth {
+}
+
+.container h2 {
+  font-size: 2.4em;
+  width: 100%;
+}
+
+.aboutMeImg {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 550px) {
+  .container {
+    padding: 3em 2em 0em 2em;
+  }
+
+  .aboutMeImg {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .aboutMeImg {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row-reverse;
+    margin-top: 140px;
+  }
+
+  .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .aboutMeImg {
+    width: 40%;
+    position: absolute;
+
+    left: 5%;
+  }
+
+  .content p {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .content p {
+    font-size: 1em;
+  }
+
+  .container h2 {
+    font-size: 3.6em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .content p {
+    font-size: 1.1em;
+  }
+
+  .container {
+    margin-top: 170px;
+  }
+
+  .container h2 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    padding: 3em 3em 3em 3em;
+  }
+  .container h2 {
+    font-size: 4.5em;
+    margin-bottom: 5%;
+  }
+
+  .container p {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .aboutMeImg {
+    width: 30%;
+    left: 15%;
+  }
+
+  .container h2 {
+    font-size: 4.8em;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .container {
+    padding: 3em 4em 3em 4em;
+  }
+
+  .aboutMeImg {
+    width: 30%;
+    left: 15%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .container {
+    padding: 3em 10em 3em 10em;
+  }
+
+  .container p {
+    font-size: 1.4em;
+  }
+}

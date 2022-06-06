@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.boldText {
+  font-weight: 800;
+}
+
+.paragraph {
+  margin: 15px 0 30px 0;
+}
+
+.container table {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 550px) {
+  .paragraph {
+    font-size: 1.2em;
+    margin: 30px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 48%;
+  }
+
+  .paragraph {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .paragraph {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .paragraph {
+    font-size: 1.4em;
+    width: 80%;
+    margin: 35px 0;
+  }
+}

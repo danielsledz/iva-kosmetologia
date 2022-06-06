@@ -1,0 +1,112 @@
+.container {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.paragraph {
+  margin: 25px 0;
+}
+
+.input,
+.textarea {
+  border-radius: 10px;
+  list-style: none;
+  border: 1px solid rgba(39, 54, 80, 0.3);
+  margin-bottom: 20px;
+  width: 100%;
+  min-height: 35px;
+  padding: 10px;
+}
+
+.textarea {
+  min-height: 70px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  border: 0;
+  text-transform: uppercase;
+  padding: 0.8em 2em;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #273650;
+  transition: 0.2s;
+  color: white;
+  font-family: 'Poppins';
+  font-size: 0.9em;
+  font-weight: 600;
+  align-self: center;
+}
+
+@media only screen and (min-width: 375px) {
+  .button {
+    width: 80%;
+    padding: 1em 2em;
+  }
+
+  .textarea {
+    min-height: 100px;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .paragraph {
+    font-size: 1.2em;
+    margin: 30px 0;
+  }
+
+  .input,
+  .textarea {
+    margin-bottom: 20px;
+    width: 80%;
+    min-height: 40px;
+  }
+
+  .textarea {
+    min-height: 100px;
+  }
+
+  .button {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .textarea {
+    min-height: 130px;
+  }
+
+  .container {
+    width: 48%;
+  }
+
+  .paragraph {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .button {
+    font-size: 1em;
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .paragraph {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .paragraph {
+    font-size: 1.4em;
+    width: 80%;
+    margin: 35px 0;
+  }
+}

@@ -1,0 +1,438 @@
+.container {
+  padding: 0em 1em;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.stainContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stainText {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  padding: 1em 0.7em;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.stainText h1 {
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
+}
+
+.stainText p {
+  font-size: 0.7em;
+  width: 100%;
+
+  text-align: center;
+}
+
+.stainText p,
+.stainText button {
+  display: none;
+}
+
+.description {
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.button {
+  border: 0;
+  text-transform: uppercase;
+  padding: 0.8em 1.3em;
+  border-radius: 30px;
+  background-color: #273650;
+  transition: 0.2s;
+  color: white;
+  font-family: 'Poppins';
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: 80%;
+  align-self: center;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #445d88;
+}
+
+.articleContainer {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articleContainer h3 {
+  margin: 20px 0;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.articleImageContainer {
+  width: 100%;
+}
+
+.articlesContainer {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.articleUnderline {
+  width: 50%;
+  height: 3px;
+  background-color: black;
+  margin-bottom: 20px;
+}
+
+.articleContainer p {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+
+.buttonArticle {
+  background-color: white;
+  color: rgba(39, 54, 80, 1);
+  border: 1px solid rgba(39, 54, 80, 1);
+  align-self: flex-start;
+}
+
+@media only screen and (min-width: 330px) {
+  .stainText h1 {
+    font-size: 2.6em;
+  }
+
+  .description {
+    font-size: 1em;
+  }
+
+  .button {
+    font-size: 1em;
+  }
+
+  .articleContainer h3 {
+    margin: 30px 0;
+    font-size: 1.7em;
+  }
+
+  .articleUnderline {
+    margin-bottom: 30px;
+  }
+
+  .articleContainer p {
+    margin-bottom: 30px;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .container {
+    padding: 1em;
+  }
+
+  .stainContainer {
+    width: 80%;
+    align-self: center;
+  }
+
+  .stainText h1 {
+    font-size: 3em;
+  }
+
+  .description {
+    margin: 40px 0;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .container {
+    padding: 2em 2em;
+  }
+
+  .description {
+    font-size: 1.1em;
+    width: 90%;
+    align-self: center;
+  }
+
+  .button {
+    padding: 1em 1.2em;
+    font-size: 1em;
+  }
+
+  .articleContainer {
+    width: 80%;
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .stainContainer {
+    width: 60%;
+  }
+
+  .articleContainer {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0em 2em 2em 2em;
+  }
+  .stainText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .stainText p,
+  .stainText button {
+    display: block;
+  }
+
+  .description,
+  .buttonMobile {
+    display: none;
+  }
+
+  .stainText p {
+    font-size: 0.8em;
+    width: 85%;
+  }
+
+  .button {
+    background-color: white;
+    color: rgba(39, 54, 80, 1);
+    font-size: 0.8em;
+    width: 60%;
+  }
+
+  .stainText h1 {
+    font-size: 2.5em;
+    width: 70%;
+  }
+
+  .articlesContainer {
+    padding: 5em 0em 2em 0em;
+  }
+
+  .articleContainer {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  .articleImageContainer {
+    width: 55%;
+  }
+
+  .articleTextContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  .articleTextContent h3 {
+    font-size: 1.6em;
+    margin: 0;
+  }
+
+  .articleUnderline {
+    margin: 15px 0;
+  }
+
+  .articleTextContent p {
+    font-size: 0.8em;
+    margin-bottom: 15px;
+  }
+
+  .buttonArticle {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    padding: 0em 2em 3em 2em;
+  }
+
+  .stainText p {
+    font-size: 1em;
+  }
+
+  .stainText h1 {
+    font-size: 2.8em;
+    width: 70%;
+  }
+
+  .button {
+    font-size: 0.9em;
+    width: 60%;
+    padding: 1em 2em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .stainText h1 {
+    font-size: 3.5em;
+    width: 80%;
+  }
+
+  .stainText p {
+    font-size: 1.1em;
+    width: 85%;
+  }
+
+  .button {
+    font-size: 1.1em;
+  }
+
+  .articleImageContainer {
+    width: 48%;
+  }
+
+  .articleTextContent {
+    width: 48%;
+  }
+
+  .buttonArticle {
+    font-size: 0.9em;
+  }
+
+  .articleTextContent p {
+    font-size: 1em;
+  }
+  .articleTextContent h3 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .stainText h1 {
+    font-size: 3.5em;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .stainContainer {
+    width: 50%;
+  }
+
+  .container {
+    padding: 0em 3em 3em 3em;
+  }
+
+  .button {
+    font-size: 1em;
+  }
+
+  .buttonArticle {
+    font-size: 0.8em;
+    width: 45%;
+  }
+
+  .articleTextContent p {
+    font-size: 1.1em;
+    margin: 0;
+  }
+  .articleTextContent h3 {
+    font-size: 3em;
+  }
+
+  .articleUnderline {
+    margin: 0px 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .stainText h1 {
+    font-size: 4em;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .stainText h1 {
+    font-size: 4.5em;
+    width: 70%;
+  }
+
+  .stainText p {
+    font-size: 1.3em;
+  }
+
+  .button {
+    width: 40%;
+  }
+
+  .articleContainer {
+    margin-bottom: 80px;
+  }
+
+  .buttonArticle {
+    font-size: 0.9em;
+  }
+
+  .articleImageContainer {
+    width: 40%;
+  }
+
+  .articleTextContent {
+    width: 55%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .stainContainer {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .container {
+    padding: 2em 10em 6em 7em;
+  }
+  .stainText p {
+    font-size: 1.5em;
+  }
+
+  .stainText h1 {
+    font-size: 5em;
+  }
+
+  .articleTextContent p {
+    font-size: 1.3em;
+  }
+  .articleTextContent h3 {
+    font-size: 3.5em;
+  }
+
+  .articleContainer {
+    margin: 60px 0;
+  }
+
+  .articleUnderline {
+    width: 40%;
+  }
+}
