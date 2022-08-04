@@ -30,7 +30,7 @@ export async function getStaticProps() {
   const treatments = await res.json()
 
   return {
-    revalidate: 1,
+    revalidate: 10,
     props: {
       treatments,
     },
