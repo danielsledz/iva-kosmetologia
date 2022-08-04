@@ -79,7 +79,6 @@ export const getStaticProps = async (context) => {
   const data = await res.json()
 
   return {
-    revalidate: 10,
     props: { article: data },
   }
 }

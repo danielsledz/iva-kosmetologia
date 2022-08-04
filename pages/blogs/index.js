@@ -16,7 +16,6 @@ export async function getStaticProps() {
   const articles = await res.json()
 
   return {
-    revalidate: 10,
     props: {
       articles,
     },
