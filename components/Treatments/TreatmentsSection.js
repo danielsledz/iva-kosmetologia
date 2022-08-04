@@ -1,23 +1,23 @@
-import Image from 'next/image';
-import React from 'react';
-import { TREATMENTS_DATA } from '../../constants/treatments';
-import styles from './TreatmentsSection.module.css';
-import { useRouter } from 'next/router';
+import Image from 'next/image'
+import React from 'react'
+import { TREATMENTS_DATA } from '../../constants/treatments'
+import styles from './TreatmentsSection.module.css'
+import { useRouter } from 'next/router'
 
-function TreatmentsList() {
-  const router = useRouter();
+function TreatmentsSection() {
+  const router = useRouter()
 
   const handleClick = () => {
-    router.push('/cennik');
-  };
+    router.push('/cennik')
+  }
 
   return (
     <div className={styles.container}>
       <h3>Zabiegi</h3>
       <div className={styles.treatmentsContainer}>
-        {TREATMENTS_DATA.map((item) => {
+        {TREATMENTS_DATA.map((item, index) => {
           return (
-            <div key={item.Name} className={styles.treatment}>
+            <div key={index} className={styles.treatment}>
               <div className={styles.treatmentImg}>
                 <Image layout="responsive" src={item.img} />
               </div>
@@ -30,7 +30,7 @@ function TreatmentsList() {
 
               <p className={styles.description}>{item.description}</p>
             </div>
-          );
+          )
         })}
       </div>
 
@@ -38,7 +38,7 @@ function TreatmentsList() {
         zobacz więcej zabiegów »
       </button>
     </div>
-  );
+  )
 }
 
-export default TreatmentsList;
+export default TreatmentsSection
