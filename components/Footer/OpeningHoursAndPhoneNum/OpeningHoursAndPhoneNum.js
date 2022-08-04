@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './OpeningHoursAndPhoneNum.module.css';
+import React from 'react'
+import styles from './OpeningHoursAndPhoneNum.module.css'
 
 function OpeningHoursAndPhoneNum() {
   return (
@@ -7,7 +7,9 @@ function OpeningHoursAndPhoneNum() {
       <h3>Zadzwoń do nas</h3>
       <p className={styles.paragraph}>
         Jeśli chcesz umówić się na wizytę, może również zadzonić. Nasz numer telefonu to{' '}
-        <span className={styles.boldText}>+48 508 514 461</span>
+        <a href="tel:+48 508 514 461" className={styles.boldText}>
+          +48 508 514 461
+        </a>
       </p>
       <h3>Godziny otwarcia</h3>
       <table className="table">
@@ -43,7 +45,7 @@ function OpeningHoursAndPhoneNum() {
         </tbody>
       </table>
     </div>
-  );
+  )
 }
 
-export default OpeningHoursAndPhoneNum;
+export default OpeningHoursAndPhoneNum

@@ -1,12 +1,16 @@
-import React from 'react';
-import Image from 'next/image';
-import styles from '../../components/Blog/BlogDetails.module.css';
-import ReactMarkdown from 'react-markdown';
-import Treatment from '../../components/FullTreatments/Treatment';
-import ArticlePreview from '../../components/Blog/ArticlePreview';
+import React from 'react'
+import Image from 'next/image'
+import styles from '../../components/Blog/BlogDetails.module.css'
+import ReactMarkdown from 'react-markdown'
+import Treatment from '../../components/Treatments/TreatmentPreview'
+import ArticlePreview from '../../components/Blog/ArticlePreview'
+import { useRef } from 'react'
 function BlogDetails({ article }) {
+  const ref = useRef()
+  const executeScroll = () => ref.current.sc()
+
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       <h1 className={styles.header1}>{article.Title}</h1>
       <div className={styles.imageContainer}>
         <Image
@@ -27,21 +31,19 @@ function BlogDetails({ article }) {
         {article.Content}
       </ReactMarkdown>
 
-      {article.Treatments.length > 0 && (
-        <h3 className={styles.header3}>Chcesz wypróbowac zabieg?</h3>
-      )}
+      {article.Treatments.length > 0 && <h3 className={styles.header3}>Zabiegi o których mowa:</h3>}
 
-      {article?.Treatments?.map((item) => (
-        <Treatment
-          key={item.Name}
-          name={item.Name}
-          description={item.Description}
-          price={item.Price}
-          duration={item.Duration}
-        />
-      ))}
-
-      {article.Treatments.length > 0 && <button className={styles.button}>Umów wizytę »</button>}
+      <div className={styles.Treatmentslist}>
+        {article?.Treatments?.map((item) => (
+          <Treatment
+            key={item.Name}
+            name={item.Name}
+            description={item.Description}
+            price={item.Price}
+            duration={item.Duration}
+          />
+        ))}
+      </div>
 
       <h3 className={styles.header3}>Inne artykuły</h3>
 
@@ -52,33 +54,35 @@ function BlogDetails({ article }) {
         id={article.id}
       />
     </div>
-  );
+  )
 }
 
 export const getStaticPaths = async () => {
-  const res = await fetch('https://iva-kosmetologia-strapi.herokuapp.com/articles');
-  const articles = await res.json();
+  const res = await fetch('https://iva-kosmetologia-strapi.herokuapp.com/articles')
+  const articles = await res.json()
 
   const paths = articles.map((item) => {
     return {
       params: { id: item.id.toString() },
-    };
-  });
+    }
+  })
 
   return {
     paths, //indicates that no page needs be created at build time
     fallback: false, //indicates the type of fallback
-  };
-};
+  }
+}
 
 export const getStaticProps = async (context) => {
-  const id = context.params.id;
-  const res = await fetch('https://iva-kosmetologia-strapi.herokuapp.com/articles/' + id);
-  const data = await res.json();
+  const id = context.params.id
+  const res = await fetch('https://iva-kosmetologia-strapi.herokuapp.com/articles/' + id)
+  const data = await res.json()
 
   return {
-    props: { article: data },
-  };
-};
+    revalidate: 1,
 
-export default BlogDetails;
+    props: { article: data },
+  }
+}
+
+export default BlogDetails

@@ -25,6 +25,10 @@
   padding: 2em 1em;
 }
 
+.anchor {
+  color: black;
+}
+
 .logoContainer {
   width: 55%;
 }

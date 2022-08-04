@@ -1,10 +1,14 @@
-import React from 'react';
-import Header from '../components/Header/Header';
-import HeaderImg from '../assets/HeaderImg2.png';
-import Treatments from '../components/FullTreatments/Treatments';
-import Layout from '../components/Layout/Layout';
+import React from 'react'
+import Header from '../components/Header/Header'
+import HeaderImg from '../assets/HeaderImg2.png'
+import Treatments from '../components/Treatments/Treatments'
+import Layout from '../components/Layout/Layout'
+import { useRef } from 'react'
 
 function Cennik({ treatments }) {
+  const ref = useRef(null)
+  const executeScroll = () => ref.current.scrollIntoView({ behavior: 'smooth' })
+
   return (
     <Layout>
       <Header
@@ -12,23 +16,25 @@ function Cennik({ treatments }) {
         title="Poznaj
         nasze zabiegi"
         btnTitle="zobacz »"
-        btnClickRoute="/cennik"
+        btnClick={executeScroll}
       />
-
-      <Treatments treatments={treatments} />
+      <div ref={ref}>
+        <Treatments treatments={treatments} />
+      </div>
     </Layout>
-  );
+  )
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://iva-kosmetologia-strapi.herokuapp.com/treatments');
-  const treatments = await res.json();
+  const res = await fetch('https://iva-kosmetologia-strapi.herokuapp.com/treatments')
+  const treatments = await res.json()
 
   return {
+    revalidate: 1,
     props: {
       treatments,
     },
-  };
+  }
 }
 
-export default Cennik;
+export default Cennik

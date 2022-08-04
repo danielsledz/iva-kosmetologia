@@ -5,6 +5,8 @@
 
 .boldText {
   font-weight: 800;
+  color: black;
+  text-decoration: none;
 }
 
 .paragraph {

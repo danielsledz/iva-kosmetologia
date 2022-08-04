@@ -86,6 +86,10 @@
   width: 20%;
 }
 
+.logoContainer:hover {
+  cursor: pointer;
+}
+
 .socialIcons {
   width: 0;
   display: none;

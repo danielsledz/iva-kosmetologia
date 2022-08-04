@@ -1,11 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
-import LogoSVG from '../../assets/logo.svg';
-import styles from './Footer.module.css';
-import BookVisit from './BookVisit/BookVisit';
-import OpeningHoursAndPhoneNum from './OpeningHoursAndPhoneNum/OpeningHoursAndPhoneNum';
-import VisitUs from './VisitUs/VisitUs';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import React from 'react'
+import Image from 'next/image'
+import LogoSVG from '../../assets/logo.svg'
+import styles from './Footer.module.css'
+import BookVisit from './BookVisit/BookVisit'
+import OpeningHoursAndPhoneNum from './OpeningHoursAndPhoneNum/OpeningHoursAndPhoneNum'
+import VisitUs from './VisitUs/VisitUs'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 function Footer() {
   return (
@@ -47,7 +47,12 @@ function Footer() {
 
         <div className={styles.authors}>
           <p>
-            design: <span className={styles.textBold}>drawninstarts.art</span>
+            design:{' '}
+            <span className={styles.textBold}>
+              <a className={styles.anchor} href="https://www.drawninstars.art/">
+                drawninstarts.art
+              </a>
+            </span>
           </p>
 
           <p>
@@ -58,7 +63,7 @@ function Footer() {
 
       <div style={{ height: 70, backgroundColor: '#273650' }} />
     </>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

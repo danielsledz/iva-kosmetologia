@@ -1,20 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import styles from './Header.module.css';
-import { useRouter } from 'next/router';
 
-function Header({ imgSrc, title, children, btnTitle, btnClickRoute }) {
-  const router = useRouter();
-  const ref = useRef(null);
-  const executeScroll = () => ref.current.scrollIntoView({ behavior: 'smooth' });
-
-  const handleClick = () => {
-    // router.push(btnClickRoute);
-    executeScroll();
-  };
-
+function Header({ imgSrc, title, children, btnTitle, btnClick }) {
   return (
-    <header ref={ref} className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.headerImg}>
         <Image src={imgSrc} layout="responsive" placeholder="blur" />
       </div>
@@ -25,7 +15,7 @@ function Header({ imgSrc, title, children, btnTitle, btnClickRoute }) {
           Sprawiam, że możesz znów <span>poczuć się dobrze we własnej skórze.</span>
         </p>
 
-        <button onClick={handleClick} className={styles.button}>
+        <button onClick={btnClick} className={styles.button}>
           {btnTitle}
         </button>
       </div>
