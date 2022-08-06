@@ -36,7 +36,7 @@ function OpeningHoursAndPhoneNum() {
           </tr>
           <tr>
             <td>Sobota</td>
-            <td>12:00 - 15:00</td>
+            <td>8:00 - 12:00</td>
           </tr>
           <tr>
             <td>Niedziela</td>

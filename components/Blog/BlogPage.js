@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from 'next/image';
-import Stain from '../../assets/BlogStain.svg';
-import styles from './BlogPage.module.css';
-import ArticlePreview from './ArticlePreview';
+import React from 'react'
+import Image from 'next/image'
+import Stain from '../../assets/BlogStain.svg'
+import styles from './BlogPage.module.css'
+import ArticlePreview from './ArticlePreview'
 
 function BlogPage({ articles }) {
   return (
@@ -10,7 +10,7 @@ function BlogPage({ articles }) {
       <div className={styles.stainContainer}>
         <Image src={Stain} alt="Plama" />
         <div className={styles.stainText}>
-          <h1>Blog kosmetyczki</h1>
+          <h1>Blog kosmetologa</h1>
           <p>
             Kosmetolog z zawodu i z pasji. Specjalista kosmetologii estetycznej i trychologii.
             Sprawiam, że możesz znów poczuć się dobrze we własnej skórze.
@@ -38,7 +38,7 @@ function BlogPage({ articles }) {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default BlogPage;
+export default BlogPage
