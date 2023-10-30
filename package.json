@@ -7,19 +7,19 @@
   },
   "homepage": ".",
   "dependencies": {
-    "bootstrap": "^5.2.0",
-    "dotenv": "^16.0.1",
-    "framer-motion": "^6.5.1",
-    "google-map-react": "^2.2.0",
+    "bootstrap": "^5.3.2",
+    "dotenv": "^16.3.1",
+    "framer-motion": "^10.16.4",
+    "google-map-react": "^2.2.1",
     "next": "latest",
-    "nodemailer": "^6.7.7",
-    "qs": "^6.11.0",
+    "nodemailer": "^6.9.7",
+    "qs": "^6.11.2",
     "react": "18.2.0",
-    "react-device-detect": "^2.2.2",
+    "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
+    "react-icons": "^4.11.0",
     "react-instagram-embed": "^3.0.0",
-    "react-markdown": "^8.0.3",
-    "react-social-media-embed": "^2.2.2"
+    "react-markdown": "^9.0.0",
+    "react-social-media-embed": "^2.3.6"
   }
 }
