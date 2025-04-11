@@ -1,11 +1,12 @@
-import React from 'react'
-import Image from 'next/image'
-import LogoSVG from '../../assets/logo.svg'
-import styles from './Footer.module.css'
-import BookVisit from './BookVisit/BookVisit'
-import OpeningHoursAndPhoneNum from './OpeningHoursAndPhoneNum/OpeningHoursAndPhoneNum'
-import VisitUs from './VisitUs/VisitUs'
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import React from "react";
+import Image from "next/image";
+import LogoSVG from "../../assets/logo.svg";
+import styles from "./Footer.module.css";
+
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import BookVisit from "./BookVisit/BookVisit";
+import OpeningHoursAndPhoneNum from "./OpeningHoursAndPhoneNum/OpeningHoursAndPhoneNum";
+import VisitUs from "./VisitUs/VisitUs";
 
 function Footer() {
   return (
@@ -42,12 +43,15 @@ function Footer() {
         </div>
 
         <p className={styles.title}>
-          © <span className={styles.textBold}>IVA Kosmetologia 2022</span>
+          ©{" "}
+          <span className={styles.textBold}>
+            IVA Kosmetologia {new Date().getFullYear()}
+          </span>
         </p>
 
         <div className={styles.authors}>
           <p>
-            design:{' '}
+            design:{" "}
             <span className={styles.textBold}>
               <a className={styles.anchor} href="https://www.drawninstars.art/">
                 drawninstarts.art
@@ -61,9 +65,9 @@ function Footer() {
         </div>
       </footer>
 
-      <div style={{ height: 70, backgroundColor: '#273650' }} />
+      <div style={{ height: 70, backgroundColor: "#273650" }} />
     </>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

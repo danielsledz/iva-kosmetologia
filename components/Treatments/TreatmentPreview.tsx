@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './Treatments.module.css';
+import React from "react";
+import styles from "./Treatments.module.css";
 
 const Treatment = ({ name, description, price, duration }) => {
   return (

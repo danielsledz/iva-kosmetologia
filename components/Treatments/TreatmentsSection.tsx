@@ -1,15 +1,15 @@
-import Image from 'next/image'
-import React from 'react'
-import { TREATMENTS_DATA } from '../../constants/treatments'
-import styles from './TreatmentsSection.module.css'
-import { useRouter } from 'next/router'
+import Image from "next/image";
+import React from "react";
+import { TREATMENTS_DATA } from "../../constants/treatments";
+import styles from "./TreatmentsSection.module.css";
+import { useRouter } from "next/router";
 
 function TreatmentsSection() {
-  const router = useRouter()
+  const router = useRouter();
 
   const handleClick = () => {
-    router.push('/cennik')
-  }
+    router.push("/cennik");
+  };
 
   return (
     <div className={styles.container}>
@@ -19,7 +19,7 @@ function TreatmentsSection() {
           return (
             <div key={index} className={styles.treatment}>
               <div className={styles.treatmentImg}>
-                <Image layout="responsive" src={item.img} />
+                <Image layout="responsive" src={item.img} alt={item.name} />
               </div>
               <h5>{item.name}</h5>
               <div className={styles.line} />
@@ -30,7 +30,7 @@ function TreatmentsSection() {
 
               <p className={styles.description}>{item.description}</p>
             </div>
-          )
+          );
         })}
       </div>
 
@@ -38,7 +38,7 @@ function TreatmentsSection() {
         zobacz więcej zabiegów »
       </button>
     </div>
-  )
+  );
 }
 
-export default TreatmentsSection
+export default TreatmentsSection;

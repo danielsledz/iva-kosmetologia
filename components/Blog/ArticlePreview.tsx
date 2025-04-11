@@ -1,13 +1,19 @@
-import { useRouter } from 'next/router';
-import styles from './BlogPage.module.css';
-import Image from 'next/image';
+import { useRouter } from "next/router";
+import styles from "./BlogPage.module.css";
+import Image from "next/image";
 
 const ArticlePreview = ({ title, description, image, id }) => {
   const router = useRouter();
   return (
     <div className={styles.articleContainer}>
       <div className={styles.articleImageContainer}>
-        <Image src={image} alt="Zdjęcie artykułu" layout="responsive" width={100} height={70} />
+        <Image
+          src={image}
+          alt="Zdjęcie artykułu"
+          layout="responsive"
+          width={100}
+          height={70}
+        />
       </div>
 
       <div className={styles.articleTextContent}>
@@ -19,7 +25,7 @@ const ArticlePreview = ({ title, description, image, id }) => {
 
         <button
           onClick={() => {
-            router.push('/blogs/' + id);
+            router.push("/blog/" + id);
           }}
           className={`${styles.button} ${styles.buttonArticle}`}
         >

@@ -1,9 +1,4 @@
-import { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Nav from '../Nav/Nav';
-import Footer from '../Footer/Footer';
-import styles from './Layout.module.css';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
@@ -17,7 +12,7 @@ const Layout = ({ children }) => {
       animate="enter"
       exit="exit"
       variants={variants}
-      transition={{ type: 'linear' }}
+      transition={{ type: "linear" }}
       className="
                     flex flex-col items-start w-full pt-10
                     px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-96

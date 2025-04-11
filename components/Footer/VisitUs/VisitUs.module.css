@@ -6,6 +6,8 @@
 
 .boldText {
   font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .paragraph {
@@ -14,8 +16,8 @@
 
 .map {
   width: 100%;
-  height: 300px;
-  margin-top: 20px;
+  height: 400px; /* Ensure that the map container has a height */
+  position: relative; /* Ensure map does not overflow */
 }
 
 @media only screen and (min-width: 550px) {
