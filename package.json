@@ -28,5 +28,8 @@
     "react-markdown": "^10.1.0",
     "react-social-media-embed": "^2.5.18",
     "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
