@@ -33,7 +33,7 @@
   transition: 0.2s;
   color: #273650;
   border: 1px solid #273650;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 0.9em;
   font-weight: 600;
   margin-bottom: 20px;
@@ -136,14 +136,22 @@
     width: 50%;
     margin: 50px auto;
   }
+  .content {
+    padding: 0 30px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
   .container {
     padding: 2em 3em;
   }
+  .articleImg {
+    object-fit: contain;
+    max-height: 600px;
+  }
   .imageContainer {
     width: 40%;
+    max-height: 600px;
     /* margin: 0; */
   }
 
@@ -154,6 +162,11 @@
     align-self: flex-start;
     margin-bottom: 50px;
     width: 40%;
+  }
+
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 
