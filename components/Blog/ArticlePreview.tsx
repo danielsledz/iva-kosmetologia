@@ -10,9 +10,9 @@ const ArticlePreview = ({ title, description, image, id }) => {
         <Image
           src={image}
           alt="Zdjęcie artykułu"
-          layout="responsive"
-          width={100}
-          height={70}
+          className={styles.articleImage}
+          width={1000}
+          height={1000}
         />
       </div>
 
